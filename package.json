@@ -1,0 +1,15 @@
+{
+  "name": "Nest_1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/afshinrahmati/Nest_1.git",
+  "author": "a.rahmati <a.rahmati@kianiranian.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^9.4.0",
+    "@nestjs/core": "^9.4.0",
+    "@nestjs/platform-express": "^9.4.0",
+    "reflect-metadata": "^0.1.13",
+    "typescript": "^5.0.4"
+  }
+}
