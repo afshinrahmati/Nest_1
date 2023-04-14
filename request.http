@@ -1,0 +1,14 @@
+### list All Messages
+
+GET http://localhost:3000/cat
+
+### create a new cat
+POST  http://localhost:3000/cat
+Content-Type: application/json
+
+{
+    "content":"Hi my name is afshin"
+}
+
+### Get One with id
+GET http://localhost:3000/cat/85

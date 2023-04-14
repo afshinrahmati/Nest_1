@@ -37,3 +37,13 @@ controller is a place for handel requesr parameter , responsome , query ,...
 can make file with mkdir or nest generate controller test/test --flat
 test first is in file && test second is class messages
 --flat dont create an extra class name is controller
+
+### pipe
+it happend befor call controlle for transform interfacr data 
+Pipes have two typical use cases:
+transformation: transform input data to the desired form (e.g., from string to integer)
+validation: evaluate input data and if valid, simply pass it through unchanged; otherwise, throw an exception
+like validation
+### DTO(data transfer object)
+A DTO is an object that defines how the data will be sent over the network
+ yarn add class-validator class-transformer
