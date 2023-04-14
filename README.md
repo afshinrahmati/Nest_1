@@ -46,10 +46,6 @@ controller is a place for handel requesr parameter , responsome , query ,...
 can make file with mkdir or nest generate controller test/test --flat
 test first is in file && test second is class messages
 --flat dont create an extra class name is controller
-
-
-
-
 ### Service
 Run some Business logic
 ### Repository
