@@ -12,13 +12,13 @@ export class CatRepository {
     return cats;
   }
 
-  async create({ name: string, age: number }) {
+  async create(data: { name: string; id: number }) {
     const contents = await readFile("cat-information.json", "utf8");
     const cats = JSON.parse(contents);
 
     const id = Math.floor(Math.random() * 999);
 
-    cats[id] = { id, contents };
+    cats[id] = { data };
     await writeFile("cat-information.json", JSON.stringify(cats));
   }
 }

@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const create_cat_dto_1 = require("./dtos/create-cat-dto");
 let CatController = class CatController {
     listCats() {
+        console.log("Sca");
         return "Salam";
     }
     getCat(id) {
@@ -34,7 +35,7 @@ __decorate([
 ], CatController.prototype, "listCats", null);
 __decorate([
     (0, common_1.Get)(":id"),
-    __param(0, (0, common_1.Param)('id')),
+    __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
