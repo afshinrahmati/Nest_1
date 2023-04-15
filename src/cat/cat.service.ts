@@ -1,9 +1,14 @@
+import { Inject, Injectable } from "@nestjs/common";
 import { CatRepository } from "./cat.repository";
+
+// interface Repository {
+//   findOne(id: string);
+//   findAll();
+//   create(data: { name: string; id: number });
+// }
+@Injectable()
 export class CatService {
-  private catRepo: CatRepository;
-  constructor() {
-    this.catRepo = new CatRepository();
-  }
+  constructor(public catRepo: CatRepository) {}
 
   async findOne(id: string) {
     return this.catRepo.findOne(id);

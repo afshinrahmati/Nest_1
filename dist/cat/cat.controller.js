@@ -17,8 +17,8 @@ const common_1 = require("@nestjs/common");
 const create_cat_dto_1 = require("./dtos/create-cat-dto");
 const cat_service_1 = require("./cat.service");
 let CatController = class CatController {
-    constructor() {
-        this.catService = new cat_service_1.CatService();
+    constructor(catService) {
+        this.catService = catService;
     }
     listCats() {
         const cat = this.catService.findAll();
@@ -58,7 +58,7 @@ __decorate([
 ], CatController.prototype, "createCat", null);
 CatController = __decorate([
     (0, common_1.Controller)("cat"),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [cat_service_1.CatService])
 ], CatController);
 exports.CatController = CatController;
 //# sourceMappingURL=cat.controller.js.map

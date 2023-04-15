@@ -9,11 +9,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CatModule = void 0;
 const common_1 = require("@nestjs/common");
 const cat_controller_1 = require("./cat.controller");
+const cat_repository_1 = require("./cat.repository");
+const cat_service_1 = require("./cat.service");
 let CatModule = class CatModule {
 };
 CatModule = __decorate([
     (0, common_1.Module)({
         controllers: [cat_controller_1.CatController],
+        providers: [cat_repository_1.CatRepository, cat_service_1.CatService],
     })
 ], CatModule);
 exports.CatModule = CatModule;

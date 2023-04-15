@@ -10,12 +10,10 @@ import {
 import { Request } from "express";
 import { CreateCatDto } from "./dtos/create-cat-dto";
 import { CatService } from "./cat.service";
+
 @Controller("cat")
 export class CatController {
-  catService: CatService;
-  constructor() {
-    this.catService = new CatService();
-  }
+  constructor(public catService: CatService) {}
   @Get("/")
   listCats() {
     const cat = this.catService.findAll();
