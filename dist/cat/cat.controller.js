@@ -15,16 +15,24 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CatController = void 0;
 const common_1 = require("@nestjs/common");
 const create_cat_dto_1 = require("./dtos/create-cat-dto");
+const cat_service_1 = require("./cat.service");
 let CatController = class CatController {
+    constructor() {
+        this.catService = new cat_service_1.CatService();
+    }
     listCats() {
-        console.log("Sca");
-        return "Salam";
+        const cat = this.catService.findAll();
+        if (cat) {
+            throw new common_1.NotFoundException("I Am so Sorry");
+        }
+        return cat;
     }
     getCat(id) {
         console.log(id);
+        return this.catService.findOne(id);
     }
     createCat(req, body) {
-        console.log(req.body);
+        return this.catService.create(body);
     }
 };
 __decorate([
@@ -49,7 +57,8 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], CatController.prototype, "createCat", null);
 CatController = __decorate([
-    (0, common_1.Controller)("cat")
+    (0, common_1.Controller)("cat"),
+    __metadata("design:paramtypes", [])
 ], CatController);
 exports.CatController = CatController;
 //# sourceMappingURL=cat.controller.js.map
